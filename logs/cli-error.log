@@ -1,0 +1,100 @@
+2017-12-09 17:06:34 Error: [PDOException] SQLSTATE[HY000] [1045] Access denied for user 'my_app'@'localhost' (using password: YES)
+Stack Trace:
+#0 C:\wamp\www\Loqman\vendor\cakephp\cakephp\src\Database\Driver\PDODriverTrait.php(48): PDO->__construct('mysql:host=loca...', 'my_app', 'secret', Array)
+#1 C:\wamp\www\Loqman\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php(104): Cake\Database\Driver\Mysql->_connect('mysql:host=loca...', Array)
+#2 C:\wamp\www\Loqman\vendor\cakephp\cakephp\src\Database\Schema\BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 C:\wamp\www\Loqman\vendor\cakephp\cakephp\src\Database\Dialect\MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 C:\wamp\www\Loqman\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 C:\wamp\www\Loqman\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(42): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 C:\wamp\www\Loqman\vendor\cakephp\cakephp\src\Database\Connection.php(322): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 C:\wamp\www\Loqman\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(951): Cake\Database\Connection->schemaCollection()
+#8 C:\wamp\www\Loqman\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(903): Bake\Shell\Task\ModelTask->_getAllTables()
+#9 C:\wamp\www\Loqman\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(918): Bake\Shell\Task\ModelTask->listAll()
+#10 C:\wamp\www\Loqman\vendor\cakephp\bake\src\Shell\BakeShell.php(234): Bake\Shell\Task\ModelTask->listUnskipped()
+#11 [internal function]: Bake\Shell\BakeShell->all()
+#12 C:\wamp\www\Loqman\vendor\cakephp\cakephp\src\Console\Shell.php(458): call_user_func_array(Array, Array)
+#13 C:\wamp\www\Loqman\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(227): Cake\Console\Shell->runCommand(Array, true, Array)
+#14 C:\wamp\www\Loqman\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#15 C:\wamp\www\Loqman\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#16 C:\wamp\www\Loqman\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#17 {main}
+
+
+2017-12-17 00:35:52 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'luqman.mensualites' doesn't exist
+Stack Trace:
+#0 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'mensualites', Array, Object(Cake\Database\Schema\Table))
+#1 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('mensualites', Array)
+#2 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\ORM\Table.php(440): Cake\Database\Schema\CachedCollection->describe('mensualites')
+#3 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\ORM\Table.php(517): Cake\ORM\Table->schema()
+#4 C:\xampp\htdocs\Loqman\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(215): Cake\ORM\Table->primaryKey()
+#5 C:\xampp\htdocs\Loqman\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(127): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\xampp\htdocs\Loqman\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(110): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'mensualites', 'Mensualites')
+#7 C:\xampp\htdocs\Loqman\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(97): Bake\Shell\Task\ModelTask->bake('Mensualites')
+#8 [internal function]: Bake\Shell\Task\ModelTask->main('mensualites')
+#9 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Console\Shell.php(472): call_user_func_array(Array, Array)
+#10 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Console\Shell.php(465): Cake\Console\Shell->runCommand(Array, false, Array)
+#11 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(227): Cake\Console\Shell->runCommand(Array, true, Array)
+#12 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#13 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#14 C:\xampp\htdocs\Loqman\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#15 {main}
+
+
+2017-12-23 13:49:14 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'luqman.evaluation' doesn't exist
+Stack Trace:
+#0 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'evaluation', Array, Object(Cake\Database\Schema\Table))
+#1 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('evaluation', Array)
+#2 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\ORM\Table.php(440): Cake\Database\Schema\CachedCollection->describe('evaluation')
+#3 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\ORM\Table.php(517): Cake\ORM\Table->schema()
+#4 C:\xampp\htdocs\Loqman\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(215): Cake\ORM\Table->primaryKey()
+#5 C:\xampp\htdocs\Loqman\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(127): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\xampp\htdocs\Loqman\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(110): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'evaluation', 'Evaluation')
+#7 C:\xampp\htdocs\Loqman\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(97): Bake\Shell\Task\ModelTask->bake('Evaluation')
+#8 [internal function]: Bake\Shell\Task\ModelTask->main('evaluation')
+#9 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Console\Shell.php(472): call_user_func_array(Array, Array)
+#10 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Console\Shell.php(465): Cake\Console\Shell->runCommand(Array, false, Array)
+#11 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(227): Cake\Console\Shell->runCommand(Array, true, Array)
+#12 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#13 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#14 C:\xampp\htdocs\Loqman\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#15 {main}
+
+
+2017-12-23 14:05:35 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'luqman.typeevaluation' doesn't exist
+Stack Trace:
+#0 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'typeevaluation', Array, Object(Cake\Database\Schema\Table))
+#1 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('typeevaluation', Array)
+#2 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\ORM\Table.php(440): Cake\Database\Schema\CachedCollection->describe('typeevaluation')
+#3 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\ORM\Table.php(517): Cake\ORM\Table->schema()
+#4 C:\xampp\htdocs\Loqman\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(215): Cake\ORM\Table->primaryKey()
+#5 C:\xampp\htdocs\Loqman\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(127): Bake\Shell\Task\ModelTask->getAssociations(Object(Cake\ORM\Table))
+#6 C:\xampp\htdocs\Loqman\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(110): Bake\Shell\Task\ModelTask->getTableContext(Object(Cake\ORM\Table), 'typeevaluation', 'Typeevaluation')
+#7 C:\xampp\htdocs\Loqman\vendor\cakephp\bake\src\Shell\Task\ModelTask.php(97): Bake\Shell\Task\ModelTask->bake('Typeevaluation')
+#8 [internal function]: Bake\Shell\Task\ModelTask->main('typeevaluation')
+#9 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Console\Shell.php(472): call_user_func_array(Array, Array)
+#10 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Console\Shell.php(465): Cake\Console\Shell->runCommand(Array, false, Array)
+#11 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(227): Cake\Console\Shell->runCommand(Array, true, Array)
+#12 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#13 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#14 C:\xampp\htdocs\Loqman\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#15 {main}
+
+
+2017-12-23 14:05:58 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'luqman.typeevaluation' doesn't exist
+Stack Trace:
+#0 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Database\Schema\Collection.php(97): Cake\Database\Schema\Collection->_reflect('Column', 'typeevaluation', Array, Object(Cake\Database\Schema\Table))
+#1 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php(63): Cake\Database\Schema\Collection->describe('typeevaluation', Array)
+#2 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\ORM\Table.php(440): Cake\Database\Schema\CachedCollection->describe('typeevaluation')
+#3 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\ORM\Table.php(517): Cake\ORM\Table->schema()
+#4 C:\xampp\htdocs\Loqman\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(291): Cake\ORM\Table->primaryKey()
+#5 C:\xampp\htdocs\Loqman\vendor\cakephp\bake\src\Shell\Task\TemplateTask.php(148): Bake\Shell\Task\TemplateTask->_loadController()
+#6 [internal function]: Bake\Shell\Task\TemplateTask->main('typeevaluation')
+#7 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Console\Shell.php(472): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Console\Shell.php(465): Cake\Console\Shell->runCommand(Array, false, Array)
+#9 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(227): Cake\Console\Shell->runCommand(Array, true, Array)
+#10 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(182): Cake\Console\ShellDispatcher->_dispatch(Array)
+#11 C:\xampp\htdocs\Loqman\vendor\cakephp\cakephp\src\Console\ShellDispatcher.php(128): Cake\Console\ShellDispatcher->dispatch(Array)
+#12 C:\xampp\htdocs\Loqman\bin\cake.php(34): Cake\Console\ShellDispatcher::run(Array)
+#13 {main}
+
+
